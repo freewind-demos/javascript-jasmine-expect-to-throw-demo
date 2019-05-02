@@ -1,7 +1,8 @@
 var hello = require('../src/hello');
 
-describe("A suite", function () {
-  it("contains spec with an expectation", function () {
-    expect(hello()).toBe("Hello,world!");
+describe("Jasmine", function () {
+  it("can handle error thrown", function () {
+    // Notice: passing a function not calling it!
+    expect(hello).toThrow(new Error('test-error'));
   });
 });
